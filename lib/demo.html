@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>umdTest demo</title>
+  <script src="./umdTest.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="./umdTest.css">
+
+</head>
+<body>
+<div id="root">
+  text:{{text}}
+  <umd-test :msg="text"/>
+</div>
+<script>
+  console.log(umdTest)
+  Vue.use(umdTest.default)
+  var vm = new Vue({
+    el: '#root',
+    data() {
+      return {
+        text: 'Vue App'
+      }
+    }
+  })
+</script>
+</body>
+</html>
