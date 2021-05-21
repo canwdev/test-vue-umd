@@ -1,6 +1,7 @@
-import Vue from 'vue'
 import App from './App.vue'
 import AllComponents from './index'
+
+const Vue = window.Vue
 Vue.config.productionTip = false
 Vue.use(AllComponents)
 new Vue({
